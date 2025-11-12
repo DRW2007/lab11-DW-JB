@@ -3,12 +3,16 @@ from calculator import *
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
-    # def test_add(self): # 3 assertions
-    #     fill in code
+    def test_add(self): # 3 assertions
+        self.assertEqual(add(5,3), 8)
+        self.assertEqual(add(0,0), 0)
+        self.assertEqual(add(5,0), 5)
 
-    # def test_subtract(self): # 3 assertions
-    #     fill in code
-    # ##########################
+    def test_subtract(self): # 3 assertions 
+        self.assertEqual(sub(5,3), 2)
+        self.assertEqual(sub(0,0), 0)
+        self.assertEqual(sub(5,0), 5)
+    
 
     ######## Partner 1
     # def test_multiply(self): # 3 assertions
@@ -19,17 +23,18 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 2
-    # def test_divide_by_zero(self): # 1 assertion
+    def test_divide_by_zero(self): # 1 assertion
     #     # call division function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     div(0, 5)
-    #     fill in code
+         self.assertRaises(div(10,0), ZeroDivisionError)
+    
 
-    # def test_logarithm(self): # 3 assertions
-    #     fill in code
+    def test_logarithm(self): # 3 assertions
+        self.assertEqual(log(10,10), 1)
+        self.assertEqual(log(10,100), 2)
+        self.assertEqual(log(10,1000), 3)
 
-    # def test_log_invalid_base(self): # 1 assertion
-    #     # use same technique from test_divide_by_zero
+    def test_log_invalid_base(self): # 1 assertion
+        self.assertRaises(log(0,10), ValueError)
     #     fill in code
     # ##########################
     
