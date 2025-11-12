@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import math
 """
 calculator.py
@@ -32,7 +32,6 @@ def log(a, b):
 
 def exp(a, b):
     return a ** b 
-
 
 # https://github.com/DRW2007/lab11-DW-JB.git
 # Partner 1: Daniel Wagner
