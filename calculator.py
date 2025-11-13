@@ -20,7 +20,7 @@ def div(a, b):
     
 def logarithm(a, b):
     try: 
-        return log(b,a)# use math library + raise ValueError
+        return math.log(b,a)# use math library + raise ValueError
     except:
         raise(ValueError)
     
