@@ -7,7 +7,7 @@ def add(a, b):
     return a + b
 
 def sub(a, b): 
-    a - b
+    return a - b
 
 def mul(a, b):
     return a * b
@@ -20,7 +20,7 @@ def div(a, b):
     
 def log(a, b): 
     try: 
-        log(b,a)# use math library + raise ValueError
+        return log(b,a)# use math library + raise ValueError
     except:
         raise(ValueError)
     
