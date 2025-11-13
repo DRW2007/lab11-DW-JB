@@ -31,8 +31,8 @@ class TestCalculator(unittest.TestCase):
 
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
-    #     # call division function inside, example:
-         self.assertRaises(div(0,10), ZeroDivisionError)
+        with self.assertRaises(ZeroDivisionError):
+            div(0, 10)
     
 
     def test_logarithm(self): # 3 assertions
@@ -41,21 +41,24 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(logarithm(10,1000), 3)
 
     def test_log_invalid_base(self): # 1 assertion
-        self.assertRaises(logarithm(0,10), ValueError)
-    #     fill in code
-    # ##########################
+        with self.assertRaises(ValueError):
+            logarithm(0, 10)
+
     
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
-        self.assertRaises(logarithm(10, -1), ValueError)
+        with self.assertRaises(ValueError):
+            logarithm(10, -1)
+
 
     def test_hypotenuse(self): # 3 assertions
-        self.assertAlmostEqual(hypotenuse(10, 10), 14.14214)
-        self.assertAlmostEqual(hypotenuse(1, 1), 1.41421)
-        self.assertAlmostEqual(hypotenuse(5, 3), 5.83095)
+        self.assertAlmostEqual(hypotenuse(4, 3), 5)
+        self.assertAlmostEqual(hypotenuse(6, 8), 10)
+        self.assertAlmostEqual(hypotenuse(8, 15), 17)
 
     def test_sqrt(self): # 3 assertions
-        self.assertRaises(square_root(-1), ValueError)
+        with self.assertRaises(ValueError):
+            square_root(-1)
         self.assertEqual(square_root(1), 1)
         self.assertEqual(square_root(16), 4)
     ##########################
